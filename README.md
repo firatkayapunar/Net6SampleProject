@@ -26,7 +26,7 @@ Bu çözüm, katmanlı mimari prensiplerine uygun olarak aşağıdaki projelerde
   → Entity Framework Core kullanılarak veritabanı işlemlerinin yapıldığı katman.
 
 - **Net6SampleProject.Caching**  
-  → `IMemoryCache` interface'i ile çalışan Memory Cache implementasyonlarını içerir. Performans artırımı ve sorgu optimizasyonu sağlar.
+  → IMemoryCache interface'i ile çalışan Memory Cache implementasyonlarını içerir. Performans artırımı ve sorgu optimizasyonu sağlar.
 
 - **Net6SampleProject.Core**  
   → Domain modelleri, interface'ler, enum'lar ve ortak bileşenleri barındıran temel katman.
