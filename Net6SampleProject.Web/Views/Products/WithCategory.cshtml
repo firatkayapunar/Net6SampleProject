@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ProductsWithCategoryViewModel>
+
+@{
+    ViewData["Title"] = "Products With Category";
+}
+
+<h2>Products With Category</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Back to Product List</a>

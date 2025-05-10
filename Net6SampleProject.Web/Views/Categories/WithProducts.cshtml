@@ -1,0 +1,38 @@
+﻿@model CategoryWithProductsViewModel
+
+@{
+    ViewData["Title"] = "Category with Products";
+}
+
+<h2>Category: @Model.Name</h2>
+
+<h4>Products</h4>
+
+@if (Model.Products.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Stock</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No products found for this category.</p>
+}
+
+<a asp-action="Index" class="btn btn-secondary">Back to Category List</a>
